@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AUTH_API = "http://localhost:5000/api/auth";
+const AUTH_API = `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/api/auth`;
 
 export default function Auth({ onAuthenticated }) {
   const [mode, setMode] = useState("login"); // "login" | "register"
