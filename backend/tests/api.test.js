@@ -26,7 +26,7 @@ describe('auth', () => {
 
     test('POST /api/auth/login rejects an incorrect password', async () => {
         const res = await request(app).post('/api/auth/login').send({
-            email: 'admin@burgerbonanza.com',
+            email: 'admin@bb.com',
             password: 'wrong-password'
         });
 
@@ -103,7 +103,7 @@ describe('bookings', () => {
     });
 
     test('PUT /api/bookings/:id lets Admin update a reservation', async () => {
-        const adminToken = await loginAs('admin@burgerbonanza.com', 'Admin123!');
+        const adminToken = await loginAs('admin@bb.com', 'admin');
 
         const created = await request(app)
             .post('/api/bookings')

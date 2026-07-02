@@ -9,8 +9,8 @@ const router = express.Router();
 
 async function seedUsers() {
     const seeds = [
-        { name: 'Restaurant Admin', email: 'admin@burgerbonanza.com', password: 'Admin123!', role: 'Admin' },
-        { name: 'Floor Staff', email: 'staff@burgerbonanza.com', password: 'Staff123!', role: 'Staff' }
+        { name: 'Restaurant Admin', email: 'admin@bb.com', password: 'admin', role: 'Admin' },
+        { name: 'Floor Staff', email: 'staff@bb.com', password: 'staff', role: 'Staff' }
     ];
 
     for (const seed of seeds) {
