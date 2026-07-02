@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import Auth from "./Auth";
 
-const API = "http://localhost:5000/api/bookings";
-const SETTINGS_API = "http://localhost:5000/api/settings";
-const WAITLIST_API = "http://localhost:5000/api/waitlist";
+const BASE = (process.env.REACT_APP_API_URL || "http://localhost:5000").replace(/\/$/, "");
+const API = `${BASE}/api/bookings`;
+const SETTINGS_API = `${BASE}/api/settings`;
+const WAITLIST_API = `${BASE}/api/waitlist`;
 
 const TIMES = ["12:00", "12:30", "13:00", "13:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"];
 const PARTY_SIZES = [1, 2, 3, 4, 5, 6, 7, 8];
